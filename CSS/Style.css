@@ -1,26 +1,27 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     }
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin:auto;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     }    
-.site-header{
+.inicio{
     background-color: #eee;
     text-align: center;
     color: black;
     border: solid black 2px;
-    width: 100%;
+    width: 99%;
     margin: auto;
     margin-bottom: 30px;
     font-family:'Times New Roman', Times, serif;
+    padding: 10px;
 }
-.tagline-p{
+.inicio p{
     color: black;
     background-color: #eee;
     line-height: normal;
     font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
 }
