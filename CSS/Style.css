@@ -1,12 +1,12 @@
 *{
     margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
     }
-    body{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        margin:auto;
-        background-color: red;
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:auto;
+    background-color: red;
     }    
 .site-header{
     background-color: #eee;
@@ -17,4 +17,10 @@
     margin: auto;
     margin-bottom: 30px;
     font-family:'Times New Roman', Times, serif;
+}
+.tagline-p{
+    color: black;
+    background-color: #eee;
+    line-height: normal;
+    font-family: 'Times New Roman', Times, serif;
 }
