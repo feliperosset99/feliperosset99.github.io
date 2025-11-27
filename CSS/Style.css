@@ -350,6 +350,28 @@ body {
     cursor: pointer
 }
 
+
+    /* Todas as opções em preto */
+#revista option {
+        color: black;
+    }
+
+    /* Apenas o placeholder em branco */
+#revista option.placeholder {
+        color: #bbb;  /* branco suave para ser visível, pode trocar por white */
+    }
+
+    /* Texto selecionado também fica preto */
+#revista {
+        color: #bbb;
+    }
+
+    /* Quando o placeholder estiver selecionado, deixa o texto claro */
+#revista:invalid {
+        color: #bbb;
+    }
+
+
 /* Responsividade */
 @media (min-width:1200px) {
     .container {
