@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marvel vs DC</title>
+  <link rel="stylesheet" href="../TrabalhoP-ginaWeb/CSS/Style.css">
+</head>
+
+<body data-page="sorteio">
+<section class="cards">
+
+
+    <article class="card reveal wide">
+        <div class="thumb"><img loading="lazy"
+                src="" alt="comics"></div>
+        <div class="meta">
+            <h3>Formulário</h3>
+            <p>Ganhe a chance de receber uma HQ clássica:
+                <span class="tooltip"
+                    data-tip="Inclui: Amazing Fantasy #15 (1ª aparição do Homem-Aranha), The Avengers #1, X-Men #1 e mais.">HQs
+                    participantes</span>
+            </p>
+
+
+            <form id="sorteioForm" class="form" novalidate>
+                <label>Nome completo <input id="nome" type="text" required></label>
+                <label>Endereço <input id="endereco" type="text" required></label>
+                <label>CPF <input id="cpf" type="text" required placeholder="000.000.000-00"></label>
+                <label>Idade <input id="idade" type="number" min="12" required></label>
+                <label>Telefone <input id="telefone" type="text" required placeholder="(00) 90000-0000"></label>
+
+
+                <label>Revista favorita
+                    <select id="revista" required>
+                        <option value="">-- escolha --</option>
+                        <option>Amazing Fantasy (Spider-Man)</option>
+                        <option>The Avengers</option>
+                        <option>Fantastic Four</option>
+                        <option>Black Panther</option>
+                        <option>Daredevil</option>
+                        <option>X-Men</option>
+                    </select>
+                </label>
+
+
+                <div class="actions">
+                    <button type="submit">Cadastrar</button>
+                    <button type="button" id="btnLimpar">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </article>
+
+
+    <article class="card reveal">
+        <div class="thumb"><img loading="lazy"
+                src="" alt="list"></div>
+        <div class="meta">
+            <h3>Inscritos</h3>
+            <p>Lista pública (nome, idade, revista favorita):</p>
+
+
+            <ul id="listaInscritos" class="lista small"></ul>
+
+
+            <div style="margin-top:12px">
+                <button id="btnSortear">Sortear vencedor</button>
+                <div id="vencedor" style="margin-top:10px; font-weight:700"></div>
+            </div>
+        </div>
+    </article>
+
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+    <div>© 2025 Universo Marvel — Página Educacional e Experimental by:Ariel, Daniel, Felipe</div>
+</footer>
+
+
+<script src="../TrabalhoP-ginaWeb/JvScript/JavaScript.js"></script>
+
+
+</body>
+
+</html>
