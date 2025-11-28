@@ -57,7 +57,7 @@ body {
     padding: 1% 3%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
     backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(211, 47, 47, 0.25);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
 }
 
@@ -76,7 +76,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    color: white;
+    color: rgb(12, 12, 12);
     font-size: 18px;
     letter-spacing: 1px;
     box-shadow: 0 6px 18px rgba(211, 47, 47, 0.25);
@@ -175,7 +175,7 @@ body {
     padding: 1.1rem;
     border-radius: 12px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.008));
-    border: 1px solid rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(211, 47, 47, 0.25);
     transition: transform .28s ease, box-shadow .28s ease;
     overflow: hidden;
 }
@@ -201,7 +201,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block
+    display: block;
 }
 
 /* detalhes do card */
@@ -210,6 +210,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+
 }
 
 .card h3 {
@@ -267,7 +268,7 @@ body {
     margin-top: 1.6rem;
     padding: 1.6rem;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(211, 47, 47, 0.25);
     color: var(--muted);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.01));
 }
