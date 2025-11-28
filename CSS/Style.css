@@ -210,6 +210,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    margin-left: 10px;
 
 }
 
@@ -262,7 +263,19 @@ body {
     color: var(--accent-red);
     margin-bottom: 0.6rem
 }
+.block li{
+    margin-left: 10px   ;
 
+}  
+.lista{
+    font-size: large;
+}
+.listasmall{
+    font-size: large;
+}
+.spider{
+    text-align: justify;
+}
 /* footer */
 .site-footer {
     margin-top: 1.6rem;
