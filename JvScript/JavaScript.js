@@ -1,49 +1,4 @@
-
-/* Estrelas canvas (pensando em tirar tá lagando o site) */
-(function initStarfield() {
-  const canvas = document.createElement('canvas');
-  canvas.id = 'starfield';
-  document.body.appendChild(canvas);
-  const ctx = canvas.getContext('2d');
-  let w = canvas.width = innerWidth;
-  let h = canvas.height = innerHeight;
-  const starsCount = Math.floor((w * h) / 8000);
-  const stars = [];
-
-  function rand(min, max) { return Math.random() * (max - min) + min }
-
-  for (let i = 0; i < starsCount; i++) {
-    stars.push({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      z: rand(0.2, 1),
-      r: rand(0.3, 1.4),
-      dx: rand(-0.02, 0.02),
-      dy: rand(-0.05, 0.05)
-    });
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, w, h);
-    for (const s of stars) {
-      ctx.beginPath();
-      ctx.fillStyle = `rgba(255,255,255,${0.6 * s.z})`;
-      ctx.arc(s.x, s.y, s.r * s.z, 0, Math.PI * 2);
-      ctx.fill();
-      s.x += s.dx * (1 + 2 * (s.z - 0.2));
-      s.y += s.dy * (1 + 2 * (s.z - 0.2));
-      if (s.x < 0) s.x = w;
-      if (s.x > w) s.x = 0;
-      if (s.y < 0) s.y = h;
-      if (s.y > h) s.y = 0;
-    }
-    requestAnimationFrame(draw);
-  }
-  window.addEventListener('resize', () => { w = canvas.width = innerWidth; h = canvas.height = innerHeight; });
-  draw();
-})();
-
-/* SCROLL */
+/* scroll */
 (function initReveal() {
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(ent => {
@@ -56,7 +11,7 @@
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 })();
 
-/* NAV link ativo */
+/* link ativo */
 (function initNavActive() {
   const page = document.body.datasetPage || document.body.getAttribute('data-page') || '';
   document.querySelectorAll('.main-nav a').forEach(a => {
@@ -69,7 +24,7 @@
 
 })();
 
-/* SORTEIO */
+/* Sorteio */
 (function initSorteio() {
   const form = document.getElementById('sorteioForm');
   if (!form) return;
@@ -78,7 +33,7 @@
 
   function somenteDigitos(s) { return (s || '').toString().replace(/\D/g, '') }
 
-  // CPF validação 
+  /* CPF validação */
   function validaCPF(cpf) {
     cpf = somenteDigitos(cpf);
     if (!cpf || cpf.length !== 11) return false;
@@ -139,7 +94,6 @@
     if (!validaTel(telefone)) { alert('Telefone inválido'); return }
     if (!revista) { alert('Escolha uma revista'); return }
 
-    // persistir 
     const inscritos = carregar();
     const digCpf = somenteDigitos(cpf);
     if (inscritos.some(i => i.cpf === digCpf)) { alert('CPF já cadastrado'); return }
@@ -153,7 +107,7 @@
     atualizarLista();
   });
 
-  // sortear
+  /* sortear */
   const btnSortear = document.getElementById('btnSortear');
   const winnerBox = document.getElementById('vencedor');
   function atualizarLista() {
@@ -182,7 +136,7 @@
   setTimeout(atualizarLista, 500);
 })();
 
-// Botão voltar ao topo
+/* Botão voltar ao topo */
 const btnTopo = document.getElementById('btnTopo');
 
 window.addEventListener('scroll', () => {
