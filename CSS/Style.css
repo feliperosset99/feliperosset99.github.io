@@ -364,23 +364,23 @@ body {
     cursor: pointer
 }
 
+/* caixa do sorteio da revista */
 
-    /* Todas as opções em preto */
 #revista option {
         color: black;
     }
 
-    /* Apenas o placeholder em branco */
+   
 #revista option.placeholder {
-        color: #bbb;  /* branco suave para ser visível, pode trocar por white */
+        color: #ff0404;  
     }
 
-    /* Texto selecionado também fica preto */
+    
 #revista {
         color: #bbb;
     }
 
-    /* Quando o placeholder estiver selecionado, deixa o texto claro */
+   
 #revista:invalid {
         color: #bbb;
     }

@@ -114,7 +114,7 @@
     const ul = document.getElementById('listaInscritos');
     if (!ul) return;
     const inscritos = carregar();
-    ul.innerHTML = inscritos.length ? inscritos.map((s, i) => `<li>${i + 1}. ${s.nome} — ${s.idade} anos — ${s.revista}</li>`).join('') : '<li>Nenhum inscrito ainda.</li>';
+    ul.innerHTML = inscritos.length ? inscritos.map((s, i) => `<p>${i + 1}. ${s.nome} — ${s.idade} anos — ${s.revista}</p>`).join('') : '<p> Nenhum inscrito ainda.</p>';
   }
   if (btnSortear) {
     btnSortear.addEventListener('click', () => {
