@@ -432,3 +432,31 @@ body{
     font-weight: 700;
     cursor: pointer
 }
+/* Botão para voltar pra cima */
+.btn-topo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #e23636;   
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
+
+.btn-topo.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.btn-topo:hover {
+  transform: scale(1.08);
+}
