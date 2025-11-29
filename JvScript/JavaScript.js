@@ -105,7 +105,6 @@
   function carregar(){ try{ return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]') }catch(e){ return [] } }
   function salvar(arr){ localStorage.setItem(STORAGE_KEY, JSON.stringify(arr)) }
 
-  // máscaras simples
   const cpfInput = document.getElementById('cpf');
   const telInput = document.getElementById('telefone');
   if(cpfInput){
@@ -170,6 +169,14 @@
       const idx = Math.floor(Math.random()*inscritos.length);
       const w = inscritos[idx];
       winnerBox.innerHTML = `<strong>Vencedor:</strong> ${w.nome} — ${w.revista}`;
+    });
+  }
+  const btnLimpar = document.getElementById('btnLimpar');
+  if(btnLimpar){
+    btnLimpar.addEventListener('click', ()=>{
+      localStorage.removeItem(STORAGE_KEY);
+      atualizarLista();
+      if(winnerBox) winnerBox.innerHTML = '';
     });
   }
   // inicial

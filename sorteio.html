@@ -12,7 +12,7 @@
 
     <header class="site-header">
         <div class="brand">
-            <div class="logo">MARV</div>
+            <div class="logo">MCU</div>
             <div>
                 <div class="site-title">Sorteio de HQ</div>
                 <div class="site-sub">Participe e concorra a edições clássicas 
@@ -38,7 +38,7 @@
             <div class="hero-top">
                 <div>
                     <div class="hero-title">Cadastre-se para o sorteio</div>
-                    <div class="hero-desc">Preencha o formulário corretamente. Todos os campos são validados.</div>
+                    <div class="hero-desc">Preencha o formulário corretamente.</div>
                 </div>
             </div>
         </article>
@@ -49,14 +49,14 @@
                         src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s="
                         alt="comics"></div>
                 <div class="meta">
-                    <h3>Formulário</h3>
+                    <h3>Formulário:</h3>
                     <form id="sorteioForm" class="form" novalidate>
-                        <label>Nome completo<input id="nome" type="text" required></label>
-                        <label>Endereço<input id="endereco" type="text" required></label>
-                        <label>CPF<input id="cpf" type="text" required placeholder="000.000.000-00"></label>
-                        <label>Idade<input id="idade" type="number" min="12" required></label>
-                        <label>Telefone<input id="telefone" type="text" required placeholder="(00) 90000-0000"></label>
-                        <label>Revista favorita
+                        <label>Nome completo:  <input id="nome" type="text" required></label>
+                        <label>Endereço:  <input id="endereco" type="text" required></label>
+                        <label>CPF:  <input id="cpf" type="text" required placeholder="000.000.000-00"></label>
+                        <label>Idade:  <input id="idade" type="number" min="12" required></label>
+                        <label>Telefone:  <input id="telefone" type="text" required placeholder="(00) 90000-0000"></label>
+                        <label>Revista favorita:  
                             <select id="revista" required>
                                 <option value="">-- escolha --</option>
                                 <option>Amazing Fantasy (Spider-Man)</option>
@@ -67,11 +67,11 @@
                                 <option>X-Men</option>
                             </select>
                         </label>
-
                         <div class="actions">
                             <button type="submit">Cadastrar</button>
-                            <button type="button" id="btnLimpar">Limpar</button>
+        
                         </div>
+
                     </form>
                 </div>
             </article>
@@ -80,19 +80,25 @@
                 <div class="thumb"><img loading="lazy"
                         src="https://images.unsplash.com/photo-1543168256-4188115760b3?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s="
                         alt="list"></div>
-                <div class="meta">
+                <div class="meta1">
+                    
                     <h3>Inscritos</h3>
                     <p>Lista pública (nome, idade, revista):</p>
                     <ul id="listaInscritos" class="lista small"></ul>
-
+                    <div class="actions">
+                            <button type="submit">Cadastrar</button>
+                            <button type="button" id="btnLimpar">Limpar vencedor</button>
+                        </div>
+                          
                     <div style="margin-top:12px">
                         <button id="btnSortear">Sortear vencedor</button>
                         <div id="vencedor" style="margin-top:10px; font-weight:700"></div>
                     </div>
+                     
                 </div>
             </article>
         </section>
-
+        <form>
         <div class="block reveal" style="margin-top:12px;">
             <h4>Regras do sorteio</h4>
             <ul class="lista">
@@ -102,6 +108,7 @@
                 <li>Entrega do prêmio feita mediante conferência de dados e endereço válido.</li>
             </ul>
         </div>
+        </form>
 
     </main>
 

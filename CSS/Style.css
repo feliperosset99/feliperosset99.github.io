@@ -357,7 +357,7 @@ body {
 }
 
 .form button {
-    background: linear-gradient(90deg, var(--accent-red), var(--accent-red-2));
+    background: rgb(226, 44, 44);
     color: white;
     border: none;
     font-weight: 700;
@@ -419,4 +419,16 @@ body{
     line-height: normal;
     font-family: 'Times New Roman', Times, serif;
     padding: 10px;
+}
+.meta1 button{
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text);
+    background: rgb(226, 44, 44);
+    color: white;
+    border: none;
+    font-weight: 700;
+    cursor: pointer
 }
