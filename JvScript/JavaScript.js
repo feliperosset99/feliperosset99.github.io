@@ -11,7 +11,7 @@
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 })();
 
-/* link ativo */
+/* link ativo e não ativo */
 (function initNavActive() {
   const page = document.body.datasetPage || document.body.getAttribute('data-page') || '';
   document.querySelectorAll('.main-nav a').forEach(a => {
@@ -33,7 +33,7 @@
 
   function somenteDigitos(s) { return (s || '').toString().replace(/\D/g, '') }
 
-  /* CPF validação */
+  /* validação do cpf da pessoa*/
   function validaCPF(cpf) {
     cpf = somenteDigitos(cpf);
     if (!cpf || cpf.length !== 11) return false;
@@ -51,6 +51,8 @@
     const d2 = calc(digits.slice(0, 10), 11);
     return d1 === digits[9] && d2 === digits[10];
   }
+
+  /* Conferir se os dados estão certos ou errados do cara que se inscrever */
 
   function validaTel(tel) {
     const d = somenteDigitos(tel);
@@ -107,7 +109,7 @@
     atualizarLista();
   });
 
-  /* sortear */
+  /* sortear o que estiver salvo como participante*/
   const btnSortear = document.getElementById('btnSortear');
   const winnerBox = document.getElementById('vencedor');
   function atualizarLista() {
@@ -136,7 +138,7 @@
   setTimeout(atualizarLista, 500);
 })();
 
-/* Botão voltar ao topo */
+/* botão  de voltar ao topo */
 const btnTopo = document.getElementById('btnTopo');
 
 window.addEventListener('scroll', () => {
