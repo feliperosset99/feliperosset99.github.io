@@ -1,3 +1,4 @@
+/* padrão */
 :root {
     --bg1: #05060a;
     --accent-red: #d32f2f;
@@ -9,7 +10,7 @@
     --max-width: 1150px;
     --radius: 14px;
 }
-
+/* Resetar margem, html e body */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -32,17 +33,7 @@ body {
     padding-top: 82px;
 }
 
-/* estrelas animadas (canvas) */
-#starfield {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0.6;
-    mix-blend-mode: screen;
-}
-
-/* HEADER FIXO */
+/* Header fixo */
 .site-header {
     position: fixed;
     top: 0;
@@ -65,7 +56,7 @@ body {
     align-items: center;
     gap: 0.8rem;
 }
-
+/* Marvel na esquerda em cima */
 .logo {
     width: 48px;
     height: 48px;
@@ -92,7 +83,7 @@ body {
     color: var(--muted)
 }
 
-/* nav */
+/* navegação das páginas */
 .main-nav {
     display: flex;
     gap: 0.6rem;
@@ -130,7 +121,7 @@ body {
     gap: 1.6rem;
 }
 
-/* heróis */
+/* Cards de cima(principais) */
 .hero-card {
     grid-column: 1 / -1;
     padding: 2.6rem;
@@ -185,7 +176,7 @@ body {
     box-shadow: 0 18px 48px rgba(0, 0, 0, 0.6)
 }
 
-/* imagem do card */
+/* imagem dos cards */
 .card .thumb {
     flex: 0 0 140px;
     height: 92px;
@@ -204,7 +195,7 @@ body {
     display: block;
 }
 
-/* detalhes do card */
+/* detalhes dos cards */
 .card .meta {
     flex: 1;
     display: flex;
@@ -226,7 +217,7 @@ body {
     color: var(--muted)
 }
 
-/* Alternativo - em larguras maiores, padrão mosaico */
+/* Alternância em largura maior, coloquei padrão mosaico, não deu mutio certo mas tá ok */
 @media(min-width:900px) {
     .cards {
         grid-template-columns: repeat(2, 1fr);
@@ -276,7 +267,7 @@ body {
 .spider{
     text-align: justify;
 }
-/* footer */
+/* rodapé */
 .site-footer {
     margin-top: 1.6rem;
     padding: 1.6rem;
@@ -286,7 +277,7 @@ body {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.01));
 }
 
-/* Telas pequenas */
+/* blocos e cards pequenos */
 @media(max-width:899px) {
     .hero-title {
         font-size: 1.5rem
@@ -392,7 +383,7 @@ body {
         width: min(88%, var(--max-width));
     }
     }
-
+/* não sei se ta sendo usado, mas não quis mexer */
 *{
     margin: 0;
     padding: 0;
@@ -402,6 +393,11 @@ body{
     margin:auto;
     background-color: rgb(255, 255, 255);
     }    
+    
+
+
+
+    /* inicio */
 .inicio{
     background-color: #eee;
     text-align: center;
@@ -420,6 +416,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
     padding: 10px;
 }
+/* botões do sorteio e outros */
 .meta1 button{
     padding: 0.8rem 1rem;
     border-radius: 10px;
